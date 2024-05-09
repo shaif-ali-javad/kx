@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&family=Unbounded:wght@500&display=swap');
+
+
+/* h3 {
+    font-family: 'Poppins';
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+ h3::before {
+    content: ''; // Specify content to make ::before work //
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    padding-top: 2rem;
+    border-bottom: .5rem solid #149ddd; // Specify border properties (style, width, and color) //
+    width: 5rem;
+}  */
+  
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Unbounded', cursive;
+     */
+}
+
+
+
+.header {
+    background-color: #3434344a;
+    transition: 500ms;
+    max-width: 100%;
+}
+
+.header.sticky {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 7px 20px 0 rgba(0, 0, 0, 0.1);
+   background-color: #ffffff;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 4.3rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out; /* Added margin transition */
+    margin-left: 0; /* Initially no margin */
+}
+
+.header.sticky .logo .img2 {
+    opacity: 1;
+    margin-left: 0rem; /* Adjust margin to create visual order change */
+}
+
+.header .logo .img3 {
+    opacity: 1;
+    margin-left: -6rem; /* Adjust margin to create visual order change */
+}
+
+.header.sticky .logo .img3 {
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+.header .navbar button{
+    outline:none ;
+    transition: 1s;
+}
+
+.header .navbar button:active{
+    transition: 500ms;
+    background-color: #00000065;
+}
+
+.header.sticky .navbar button:active{
+    transition: 500ms;
+    background-color: #000000bf;
+}
+
+.header.sticky .navbar button{
+    outline: .2rem solid rgba(33, 33, 33, 0.333) ;
+}
+
+.header .navbar-nav button .navbar-toggler-icon {
+    color: #fff;
+}
+
+.header .navbar-nav li {
+    padding: 0 1rem;
+}
+
+.header .navbar-nav .active {
+    transition: 500ms;
+    background-color: rgba(0, 0, 0, 0.343);
+    border-radius: 3rem;
+}
+
+.header.sticky .navbar-nav .active {
+    background-color: #04536b;
+}
+
+.header.sticky .navbar-nav .active a{
+    color: #fff;
+}
+
+.header .navbar-nav li:hover {
+    background-color: rgba(0, 0, 0, 0.343);
+    border-radius: 3rem;
+}
+
+.header.sticky .navbar-nav li:hover {
+    background-color: #04536b;
+    border-radius: 3rem;
+    transition: background-color 0.3s ease-in-out; /* Added transition for background-color */
+}
+
+.header .navbar-nav li a {
+    color: #fff;
+    transition: color 0.3s ease-in-out; /* Added transition for color */
+}
+
+.header.sticky .navbar-nav li a {
+    transition: color 0.1s ease-in-out; /* Added transition for color */
+    color: #000000;
+}
+.header.sticky .navbar-nav li:hover a {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+
+/* Default styles for carousel images */
+.carousel-inner img {
+    height: 30rem; /* Default height for larger screens */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 815px) {
+    .carousel-inner {
+        max-height: 27rem;
+        overflow: hidden;
+    }
+
+    .carousel-inner img {
+        height: 16rem; /* Adjust image height for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+.main-heading {
+    text-align: center;
+    margin: 100px 0 -3rem;
+}
+
+.main-heading h1 {
+    font-size: 60px;
+    font-family: 'Poppins';
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.main-heading h1::before {
+    content: ''; /* Specify content to make ::before work */
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 30%;
+    height: 100%;
+    padding-top: 2rem;
+    border-bottom: .5rem solid #149ddd; /* Specify border properties (style, width, and color) */
+}
+
+@media screen and (max-width: 615px) {
+    .main-heading h1 {
+        font-size: 2rem;
+    }   
+}
+
+.main-heading .p1 {
+    margin: 1rem 0;
+    font-size: 20px;
+}
+
+
+
+.explaination {
+    max-width: 100%;
+    display: flex;
+    margin: 10rem 0;
+    width: 100%;
+}
+
+.explaination1 {
+    margin-top: -9rem;
+}
+
+.explaination .image {
+    height: 100%;
+    width: 100%;
+}
+
+.explaination .image img {
+    height: 25em;
+    width: 28em;
+}
+
+.explaination .image {
+    height: 31rem;
+}
+  
+.explaination .image0 .border0 {
+    content: '';
+    width: 26.5rem;
+    height: 23rem;
+    border: 10px solid rgba(0, 0, 0, 0.073);
+    z-index: -1;
+    transform: translate(-10%, -90%);
+}
+  
+.explaination .image1 .border0 {
+    content: '';
+    width: 26.5rem;
+    height: 23rem;
+    border: 10px solid rgba(0, 0, 0, 0.073);
+    z-index: -1;
+    transform: translate(15%, -90%);
+}
+
+@media screen and (max-width: 991px) { 
+
+    .explaination1 {
+        margin-top: -6rem;
+    }    
+
+    .explaination .image {
+        
+    }
+
+    .explaination .image img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .explaination .image .border0 {
+        border: none;
+        width: 0;
+        height: 0;
+    }    
+    
+    .explaination .content0 {
+        padding-right: 0;
+        padding-top: 3rem;
+    }
+    
+    .explaination .content1 {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 531px) {
+
+    .explaination .image {
+        margin-bottom: -8rem;
+    }
+
+    .explaination .image img {
+        height: 70%;
+        width: 100%;
+    }
+
+}
+
+.explaination.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.explaination [class^="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.explaination .content0 {
+    padding-right: 2.5rem;
+}
+
+.explaination .content1 {
+    padding-left: 2.5rem;
+}
+
+.explaination .content .p0 {
+    font-family: 'Poppins';
+    font-size: 35px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.explaination h2::before {
+    content: ''; /* Specify content to make ::before work */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    padding-top: 2rem;
+    border-bottom: .5rem solid #149ddd; /* Specify border properties (style, width, and color) */
+    width: 5rem;
+    transition: width 2000ms ease-in-out, border-bottom 500ms ease-in-out;
+} 
+
+.explaination:hover h2::before {
+  width: 100%;
+  transition: width 1000ms ease-in-out, border-bottom 500ms ease-in-out;
+}
+
+.explaination:hover h2::before {
+    width: 100%;
+    transition: width 1000ms ease-in-out, border-bottom 500ms ease-in-out;
+}
+
+.explaination .content .p1 {
+    font-size: 18px;
+}
+
+.explaination .content .p2 {
+    line-height: 30px;
+}
+
+.explaination .col-12 .p-0 {
+    padding: 0;
+}
+  
+
+ 
+.s-2 h2 {
+    font-family: 'Poppins';
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.s-2 h2::before {
+    content: ''; /* Specify content to make ::before work */
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 20%;
+    height: 100%;
+    padding-top: 2rem;
+    border-bottom: .5rem solid #ffffff; /* Specify border properties (style, width, and color) */
+}
+
+@media screen and (max-width: 520px) {
+    
+    .s-2 h2 {
+        font-size: 5rem;   
+    }  
+    
+}
+
+@media screen and (max-width: 450px) {
+    
+    .s-2 h2 {
+        font-size: 4rem;   
+    }  
+
+}
+
+@media screen and (max-width: 400px) {
+    
+    .s-2 h2 {
+        font-size: 3rem;   
+    }  
+    
+}
+
+.s-2 {
+    background-color: #ffffff;
+}
+
+.s-2 .container {
+    width: 100%;
+}
+
+.container .row .card {
+    border-radius: 1rem;
+    height: 20rem;
+}
+
+.container .row .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container .row .card .card-body .card-img-top {
+    position: absolute;
+}
+
+.container .row .card .card-body .card-title {
+    color: #04536b;
+    font-family: 'Roboto';
+}
+
+.container .row .card .card-body .btn {
+    color: #fff;
+    background-color: #04536b;
+    border: none;
+    border-radius: 10rem;
+}
+
+.container .row .card .card-body .btn:active {
+    background-color: #02303e;
+}
+
+
+
+footer .text-reset {
+     color: #4e4e4e;
+}
